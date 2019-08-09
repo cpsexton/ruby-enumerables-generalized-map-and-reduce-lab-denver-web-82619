@@ -11,15 +11,15 @@ end
 
 def reduce(source, x=nil)
   if x
-    accum = x
+    total = x
     i = 0
   else
-    accum = source[0]
+    total = source[0]
     i = 1
   end
   while i < source.length
-    accum = yield(accum, source[i])
+    total = yield(total, source[i])
     i += 1
   end
-  return accum
+  return total
 end
