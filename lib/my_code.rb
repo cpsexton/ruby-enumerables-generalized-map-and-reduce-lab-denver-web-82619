@@ -6,7 +6,7 @@ def map(source)
     new.push(yield(source[i]))
     i += 1
   end
-  new
+  return new
 end
 
 def reduce(source, x=nil)
@@ -21,5 +21,5 @@ def reduce(source, x=nil)
     accum = yield(accum, source[i])
     i += 1
   end
-  accum
+  return accum
 end
